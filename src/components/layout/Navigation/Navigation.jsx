@@ -23,7 +23,7 @@ export function Navigation() {
     <>
       <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
         <div className={styles.container}>
-          {/* Brand - Eleviq */}
+          {/* Brand - Winx */}
           <a
             href="#hero"
             onClick={(e) => {
@@ -33,10 +33,10 @@ export function Navigation() {
             className={styles.brand}
           >
             <div className={styles.logoMark}>
-              <img src="/image.img.png" alt="Eleviq Logo" style={{ width: 38, height: 38, objectFit: 'contain' }} />
+              <img src="/winx-logo-dark.png" alt="Winx Logo" style={{ height: 28, width: 'auto', objectFit: 'contain' }} />
             </div>
             <span className={styles.brandName}>
-              Eleviq
+              Winx
             </span>
           </a>
 

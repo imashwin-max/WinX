@@ -1,6 +1,6 @@
 .portfolio {
   padding: 120px 0;
-  background: #FFFFFF;
+  background: var(--color-bg-primary);
   position: relative;
 }
 
@@ -34,7 +34,7 @@
   font-family: 'Outfit', sans-serif;
   font-size: 13px;
   font-weight: 800;
-  color: #2563EB;
+  color: #141413;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
@@ -43,7 +43,7 @@
   font-family: 'Outfit', sans-serif;
   font-size: 26px;
   font-weight: 800;
-  color: #0F172A;
+  color: #141413;
   line-height: 1.25;
   letter-spacing: -0.02em;
   margin: 4px 0 0 0;
@@ -52,7 +52,7 @@
 .solutionText {
   font-size: 15px;
   line-height: 1.6;
-  color: #334155;
+  color: #57534E;
   font-weight: 500;
   margin: 0;
 }
@@ -78,23 +78,24 @@
   gap: 8px;
   padding: 10px 20px;
   border-radius: 12px;
-  background: #1E88E5;
+  background: #141413;
   color: #FFFFFF;
   font-family: 'Outfit', sans-serif;
   font-size: 14px;
   font-weight: 700;
-  border: 1px solid #1E88E5;
+  border: 1px solid #141413;
   cursor: pointer;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 14px rgba(30, 136, 229, 0.3);
+  box-shadow: 0 4px 14px rgba(20, 20, 19, 0.15);
   text-decoration: none;
 }
 
 .routerBtn:hover {
-  background: #1565C0;
+  background: #2C2B28;
+  border-color: #2C2B28;
   color: #FFFFFF;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(30, 136, 229, 0.4);
+  box-shadow: 0 6px 20px rgba(20, 20, 19, 0.22);
 }
 
 .secondaryLink {
@@ -103,7 +104,7 @@
   gap: 6px;
   font-size: 13px;
   font-weight: 700;
-  color: #475569;
+  color: #57534E;
   background: none;
   border: none;
   padding: 0;
@@ -114,7 +115,7 @@
 }
 
 .secondaryLink:hover {
-  color: #2563EB;
+  color: #141413;
 }
 
 .cardImageWrapper {
@@ -135,7 +136,7 @@
 
 .cardImageWrapper:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 12px 28px rgba(20, 20, 19, 0.12);
 }
 
 .cardImageWrapper img {

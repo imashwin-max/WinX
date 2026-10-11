@@ -1,6 +1,6 @@
 .contact {
   padding: 120px 0;
-  background: #F8FBFF;
+  background: var(--color-bg-primary);
 }
 
 .container {

@@ -1,17 +1,17 @@
 .card {
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
+  background: #FAF8F5;
+  border: 1px solid #E5DFD5;
   border-radius: 16px;
   overflow: hidden;
   position: relative;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 2px 8px rgba(20, 20, 19, 0.04);
 }
 
 .hoverLift:hover {
-  background: #FFFFFF;
-  border-color: rgba(37, 99, 235, 0.3);
-  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.1);
+  background: #FAF8F5;
+  border-color: #141413;
+  box-shadow: 0 12px 32px rgba(20, 20, 19, 0.08);
   transform: translateY(-5px);
 }
 
@@ -22,7 +22,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #2563EB, #1D4ED8);
+  background: #141413;
 }
 
 .padSm {

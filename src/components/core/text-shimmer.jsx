@@ -21,7 +21,7 @@ export function TextShimmer({
   duration = 2,
   scrollLinked = false,
   onlyInView = true,
-  gradient = 'linear-gradient(110deg, currentColor, 40%, #2563EB, 50%, #1D4ED8, 60%, currentColor)',
+  gradient = 'linear-gradient(110deg, currentColor, 40%, #141413, 50%, #3D3A35, 60%, currentColor)',
   ...props
 }) {
   const ref = useRef(null);

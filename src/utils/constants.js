@@ -1,8 +1,8 @@
 export const COMPANY_INFO = {
-  name: 'Eleviq',
+  name: 'Winx',
   tagline: 'Solving Problems through Advanced Technologies',
-  email: 'info@eleviq.com',
-  phone: '+91 8778014893',
+  email: 'info@winx.com',
+  phone: '+91 8148092163',
   address: '500 Howard Street, Suite 400, San Francisco, CA 94105',
   responseGuarantee: 'Guaranteed response within 24 business hours',
 };

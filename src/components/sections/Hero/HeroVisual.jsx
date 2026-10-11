@@ -3,15 +3,15 @@ import { Magnetic } from '../../core/magnetic';
 export function HeroVisual() {
   return (
     <div className="relative w-full h-[420px] md:h-[480px] flex items-center justify-center">
-      {/* Soft ambient glow behind the image */}
+      {/* Soft ambient glow behind the image matching warm luxury theme */}
       <div
         className="absolute"
         style={{
           width: '420px',
           height: '420px',
-          background: 'radial-gradient(circle, rgba(59,130,246,0.12) 0%, rgba(168,85,247,0.06) 40%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(214, 203, 185, 0.45) 0%, rgba(235, 228, 215, 0.25) 45%, transparent 70%)',
           borderRadius: '50%',
-          filter: 'blur(20px)',
+          filter: 'blur(28px)',
         }}
       />
 
@@ -21,13 +21,13 @@ export function HeroVisual() {
       >
         <img
           src="hero-visual.png"
-          alt="Eleviq Cognitive Core Visual"
+          alt="Winx Cognitive Core Visual"
           style={{
             width: '100%',
             maxWidth: '440px',
             height: 'auto',
             objectFit: 'contain',
-            filter: 'drop-shadow(0 20px 40px rgba(59, 130, 246, 0.25))',
+            filter: 'drop-shadow(0 24px 44px rgba(26, 24, 22, 0.14))',
             userSelect: 'none',
             pointerEvents: 'none',
           }}

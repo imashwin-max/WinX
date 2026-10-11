@@ -2,14 +2,14 @@
   flex: 0 0 min(520px, 85vw);
   width: min(520px, 85vw);
   display: flex;
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
+  background: #FAF8F5;
+  border: 1px solid #E5DFD5;
   border-radius: 20px;
   padding: 28px 24px;
   gap: 20px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 2px 12px rgba(20, 20, 19, 0.04);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
     border-color 0.35s ease;
@@ -18,8 +18,8 @@
 
 .card:hover {
   transform: translateY(-5px);
-  border-color: rgba(37, 99, 235, 0.35);
-  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.12);
+  border-color: #141413;
+  box-shadow: 0 12px 32px rgba(20, 20, 19, 0.09);
 }
 
 .card:hover::before {
@@ -29,7 +29,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #2563EB, #1D4ED8);
+  background: #141413;
 }
 
 .content {
@@ -43,9 +43,9 @@
   width: 48px;
   height: 48px;
   border-radius: 14px;
-  background: #EFF6FF;
-  border: 1px solid rgba(37, 99, 235, 0.2);
-  color: #2563EB;
+  background: #EAE6DE;
+  border: 1px solid rgba(20, 20, 19, 0.15);
+  color: #141413;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,14 +56,14 @@
   font-family: 'Outfit', system-ui, sans-serif;
   font-size: 20px;
   font-weight: 800;
-  color: #0F172A;
+  color: #141413;
   margin: 0 0 10px 0;
   letter-spacing: -0.02em;
   line-height: 1.25;
 }
 
 .description {
-  color: #334155;
+  color: #57534E;
   font-size: 14px;
   line-height: 1.65;
   margin: 0 0 18px 0;
@@ -85,10 +85,10 @@
   align-items: center;
   gap: 10px;
   font-size: 13.5px;
-  color: #0F172A;
+  color: #141413;
   font-weight: 600;
   padding: 9px 0;
-  border-bottom: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E5DFD5;
 }
 
 .benefitItem:last-child {
@@ -96,7 +96,7 @@
 }
 
 .arrow {
-  color: #2563EB;
+  color: #141413;
   font-size: 14px;
   flex-shrink: 0;
   font-weight: 700;
@@ -109,8 +109,8 @@
   margin-top: auto;
   padding: 11px 20px;
   border-radius: 999px;
-  border: 1px solid #1E88E5;
-  background: #1E88E5;
+  border: 1px solid #141413;
+  background: #141413;
   color: #FFFFFF;
   font-family: 'Outfit', system-ui, sans-serif;
   font-size: 13.5px;
@@ -121,7 +121,7 @@
 }
 
 .cta:hover {
-  background: #1565C0;
+  background: #2C2B28;
   color: #FFFFFF;
   gap: 12px;
 }
@@ -153,7 +153,7 @@
   flex-direction: column;
   gap: 4px;
   font-size: 11px;
-  color: #64748B;
+  color: #78716C;
   font-weight: 500;
 }
 
@@ -169,8 +169,8 @@
 }
 
 .iotCell {
-  background: #F8FAFF;
-  border: 1px solid #E2E8F0;
+  background: #EFEBE1;
+  border: 1px solid #E5DFD5;
   border-radius: 10px;
   padding: 10px 8px;
   display: flex;
@@ -181,7 +181,7 @@
 .iotLabel {
   font-size: 9px;
   font-weight: 600;
-  color: #475569;
+  color: #78716C;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -189,7 +189,7 @@
 .iotValue {
   font-size: 15px;
   font-weight: 700;
-  color: #0F172A;
+  color: #141413;
   font-family: 'Outfit', system-ui, sans-serif;
 }
 
@@ -199,10 +199,10 @@
 }
 
 .terminal {
-  background: #F1F5F9;
+  background: #EFEBE1;
   border-radius: 12px;
   padding: 12px;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #E5DFD5;
 }
 
 .terminalDots {
@@ -215,29 +215,29 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #CBD5E1;
+  background: #D8D1C5;
 }
 
 .terminalDots span:nth-child(1) {
-  background: #F87171;
+  background: #E11D48;
 }
 .terminalDots span:nth-child(2) {
-  background: #FBBF24;
+  background: #D97706;
 }
 .terminalDots span:nth-child(3) {
-  background: #34D399;
+  background: #16A34A;
 }
 
 .terminalTitle {
   font-size: 10px;
-  color: #64748B;
+  color: #78716C;
   margin-bottom: 10px;
   font-family: ui-monospace, monospace;
 }
 
 .progressBar {
   height: 6px;
-  background: rgba(37, 99, 235, 0.12);
+  background: rgba(20, 20, 19, 0.1);
   border-radius: 3px;
   overflow: hidden;
 }
@@ -245,7 +245,7 @@
 .progressFill {
   height: 100%;
   width: 62%;
-  background: linear-gradient(90deg, #2563EB, #3B82F6);
+  background: #141413;
   border-radius: 3px;
   animation: progressPulse 2.4s ease-in-out infinite;
 }
@@ -269,21 +269,21 @@
 }
 
 .flowNode {
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
+  background: #FAF8F5;
+  border: 1px solid #E5DFD5;
   border-radius: 8px;
   padding: 8px 12px;
   font-size: 11px;
   font-weight: 600;
-  color: #0F172A;
+  color: #141413;
   font-family: ui-monospace, monospace;
   white-space: nowrap;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 1px 3px rgba(20, 20, 19, 0.04);
 }
 
 .flowNodeDark {
-  background: #2563EB;
-  color: #0F172A;
+  background: #141413;
+  color: #FFFFFF;
   border-radius: 8px;
   padding: 8px 12px;
   font-size: 11px;
@@ -295,7 +295,7 @@
 .flowArrow {
   width: 2px;
   height: 16px;
-  background: #93C5FD;
+  background: #A8A29E;
   position: relative;
 }
 
@@ -307,14 +307,14 @@
   transform: translateX(-50%);
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 5px solid #93C5FD;
+  border-top: 5px solid #A8A29E;
 }
 
 /* Agents visual */
 .visualAgents {
   width: 100%;
-  background: #F8FAFF;
-  border: 1px solid #E2E8F0;
+  background: #EFEBE1;
+  border: 1px solid #E5DFD5;
   border-radius: 12px;
   overflow: hidden;
   font-size: 10px;
@@ -325,10 +325,10 @@
   align-items: center;
   gap: 8px;
   padding: 8px 10px;
-  background: #EFF6FF;
-  border-bottom: 1px solid #E2E8F0;
+  background: #EAE6DE;
+  border-bottom: 1px solid #E5DFD5;
   font-family: ui-monospace, monospace;
-  color: #64748B;
+  color: #78716C;
   font-size: 9px;
 }
 
@@ -341,14 +341,14 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #93C5FD;
+  background: #A8A29E;
   display: block;
 }
 
 .codeLang {
   margin-left: auto;
   font-weight: 600;
-  color: #2563EB;
+  color: #141413;
   letter-spacing: 0.04em;
 }
 
@@ -358,7 +358,7 @@
   font-family: ui-monospace, monospace;
   font-size: 9.5px;
   line-height: 1.45;
-  color: #334155;
+  color: #2C2B28;
   white-space: pre;
   overflow: hidden;
 }
@@ -371,8 +371,8 @@
 }
 
 .exec {
-  background: #1E3A8A;
-  color: #DBEAFE;
+  background: #2C2B28;
+  color: #E7E5E4;
   font-size: 9px;
   padding: 4px 8px;
   border-radius: 4px;
@@ -380,8 +380,8 @@
 }
 
 .done {
-  background: #1E3A8A;
-  color: #4ADE80;
+  background: #141413;
+  color: #E7E5E4;
   font-size: 9px;
   padding: 4px 8px;
   border-radius: 4px;

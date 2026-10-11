@@ -1,6 +1,8 @@
 .process {
   padding: 120px 0;
-  background: #F8FBFF;
+  background: var(--color-bg-secondary);
+  border-top: 1px solid rgba(229, 223, 213, 0.7);
+  border-bottom: 1px solid rgba(229, 223, 213, 0.7);
   position: relative;
 }
 
@@ -15,4 +17,3 @@
   flex-direction: column;
   gap: 0;
 }
-

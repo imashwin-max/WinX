@@ -20,7 +20,7 @@
 
 .highlight-char,
 .highlight-word {
-  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 60%, #1D4ED8 100%);
+  background: linear-gradient(135deg, #141413 0%, #3D3A35 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

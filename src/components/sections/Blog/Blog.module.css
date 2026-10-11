@@ -1,6 +1,8 @@
 .blog {
   padding: 120px 0;
-  background: #FFFFFF;
+  background: #FCFBF9;
+  border-top: 1px solid rgba(229, 223, 213, 0.7);
+  border-bottom: 1px solid rgba(229, 223, 213, 0.7);
 }
 
 .container {

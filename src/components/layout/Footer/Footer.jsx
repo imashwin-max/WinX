@@ -15,7 +15,7 @@ export function Footer() {
       showToast('Please enter a valid email address', 'error');
       return;
     }
-    showToast('Subscribed to Eleviq Insights!', 'success');
+    showToast('Subscribed to Winx Insights!', 'success');
     setEmail('');
   };
 
@@ -25,9 +25,9 @@ export function Footer() {
         <div className={styles.topGrid}>
           <div className={styles.brandCol}>
             <a href="#hero" onClick={() => navigateToSection('hero')} className={styles.brand}>
-              <img src="/Asset 2.png" alt="Eleviq Logo" style={{ width: 38, height: 38, objectFit: 'contain' }} />
+              <img src="/winx-logo-white.png" alt="Winx Logo" style={{ height: 28, width: 'auto', objectFit: 'contain' }} />
               <span className={styles.brandName}>
-                Eleviq
+                Winx
               </span>
             </a>
             <p className={styles.description}>{COMPANY_INFO.tagline}</p>
@@ -99,7 +99,7 @@ export function Footer() {
 
         <div className={styles.bottomBar}>
           <p className={styles.copyright}>
-            © {new Date().getFullYear()} Eleviq AI Inc. All rights reserved.
+            © {new Date().getFullYear()} Winx AI Inc. All rights reserved.
           </p>
           <div className={styles.legalLinks}>
             <a href="#privacy">Privacy Policy</a>

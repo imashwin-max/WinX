@@ -1,6 +1,6 @@
 // Centralized Analytics Integration Helper
 
-const ANALYTICS_ID = import.meta.env.VITE_ANALYTICS_ID || 'G-ELEVIQ-DEV';
+const ANALYTICS_ID = import.meta.env.VITE_ANALYTICS_ID || 'G-WINX-DEV';
 
 export function trackPageView(path) {
   if (typeof window !== 'undefined' && window.gtag) {

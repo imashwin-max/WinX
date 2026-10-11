@@ -25,14 +25,14 @@ function VisualMock({ type }) {
           <polygon
             points="40,8 72,30 60,68 20,68 8,30"
             fill="none"
-            stroke="#2563EB"
+            stroke="#141413"
             strokeWidth="1.8"
           />
-          <circle cx="40" cy="8" r="3.5" fill="#2563EB" />
-          <circle cx="72" cy="30" r="3.5" fill="#2563EB" />
-          <circle cx="60" cy="68" r="3.5" fill="#2563EB" />
-          <circle cx="20" cy="68" r="3.5" fill="#2563EB" />
-          <circle cx="8" cy="30" r="3.5" fill="#2563EB" />
+          <circle cx="40" cy="8" r="3.5" fill="#141413" />
+          <circle cx="72" cy="30" r="3.5" fill="#141413" />
+          <circle cx="60" cy="68" r="3.5" fill="#141413" />
+          <circle cx="20" cy="68" r="3.5" fill="#141413" />
+          <circle cx="8" cy="30" r="3.5" fill="#141413" />
         </svg>
         <div className={styles.strategyLegend}>
           <span>• Cost: Optim</span>

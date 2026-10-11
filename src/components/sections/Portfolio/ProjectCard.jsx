@@ -31,7 +31,7 @@ export function ProjectCard({ project, reverse }) {
         </div>
 
         <div>
-          <h4 className={styles.blockTitle}>Eleviq Engineering Solution</h4>
+          <h4 className={styles.blockTitle}>Winx Engineering Solution</h4>
           <p className={styles.blockText}>{solution}</p>
         </div>
 

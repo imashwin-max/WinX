@@ -1,24 +1,24 @@
 .card {
-  background: #F8FAFF;
-  border: 1px solid #E2E8F0;
+  background: #EFEBE1;
+  border: 1px solid #E5DFD5;
   border-radius: 12px;
   padding: 16px 20px;
   text-align: center;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 1px 3px rgba(20, 20, 19, 0.04);
 }
 
 .metric {
   font-family: 'Outfit', sans-serif;
   font-size: 28px;
   font-weight: 800;
-  color: #2563EB;
+  color: #141413;
   margin-bottom: 4px;
   line-height: 1;
 }
 
 .label {
   font-size: 11px;
-  color: #475569;
+  color: #78716C;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;

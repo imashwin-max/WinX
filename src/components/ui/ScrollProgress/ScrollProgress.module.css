@@ -6,7 +6,7 @@
   right: 0;
   height: 3px;
   z-index: 99999;
-  background: rgba(37, 99, 235, 0.1); /* light orange track */
+  background: rgba(20, 20, 19, 0.08);
 }
 
 /* The animated fill bar */
@@ -17,8 +17,8 @@
   right: 0;
   bottom: 0;
   width: 100%;
-  background: linear-gradient(90deg, #60A5FA 0%, #2563EB 60%, #1D4ED8 100%);
+  background: #141413;
   transform-origin: left;
   border-radius: 0 2px 2px 0;
-  box-shadow: 0 0 8px rgba(37, 99, 235, 0.5);
+  box-shadow: 0 0 8px rgba(20, 20, 19, 0.3);
 }

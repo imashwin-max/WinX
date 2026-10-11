@@ -1,12 +1,12 @@
 /* =============================================
-   HERO — Matches Eleviq screenshot style
+   HERO — Luxury Warm Cream & Obsidian Theme
    ============================================= */
 
 .hero {
   position: relative;
   padding: 160px 0 100px 0;
   overflow: hidden;
-  background: #FFFFFF;
+  background: #F5F2EB;
 }
 
 .hero::before {
@@ -16,7 +16,7 @@
   right: -80px;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.07) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(214, 203, 185, 0.35) 0%, transparent 65%);
   pointer-events: none;
   z-index: 0;
 }
@@ -48,13 +48,13 @@
   align-items: center;
   width: fit-content;
   padding: 8px 16px;
-  background: #EFF6FF;
-  border: 1px solid #BFDBFE;
+  background: #EAE6DE;
+  border: 1px solid rgba(20, 20, 19, 0.15);
   border-radius: 100px;
   font-family: 'Inter', sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: #1D4ED8;
+  color: #141413;
 }
 
 /* Title */
@@ -69,16 +69,16 @@
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: -0.035em;
-  color: #0F172A;
+  color: #141413;
 }
 
 .line {
   display: block;
 }
 
-/* Blue lines (Process. / Vision.) – Verandah Reverie script font */
+/* Editorial script font */
 .highlight {
-  color: #2563EB;
+  color: #141413;
   font-style: normal;
   font-family: 'Verandah Reverie', 'Playfair Display', Georgia, serif;
   font-weight: 400;
@@ -92,7 +92,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 17px;
   line-height: 1.65;
-  color: #475569;
+  color: #57534E;
   max-width: 480px;
   margin: 0;
 }

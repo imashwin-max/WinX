@@ -99,7 +99,7 @@ export function ContactForm() {
             : 'Schedule Strategy Session'}
         </Button>
 
-        <p className={styles.note}>🔒 SOC2 security compliant. Your data is strictly NDA protected.</p>
+
       </form>
     </div>
   );

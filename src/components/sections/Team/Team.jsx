@@ -8,7 +8,7 @@ export function Team() {
     <section className={styles.team} id="team">
       <div className={styles.container}>
         <SectionHeader
-          eyebrow="THE MINDS BEHIND ELEVIQ"
+          eyebrow="THE MINDS BEHIND WINX"
           title="World-Class AI Leaders &"
           titleHighlight="Neural Engineers"
           description="Our leadership team unites deep research expertise from Google AI, MIT, AWS, and EU Governance councils."

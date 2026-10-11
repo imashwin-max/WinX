@@ -12,27 +12,27 @@
 }
 
 .blue {
-  background: rgba(37, 99, 235, 0.1);
-  color: #2563EB;
-  border: 1px solid rgba(37, 99, 235, 0.2);
+  background: #EAE6DE;
+  color: #141413;
+  border: 1px solid rgba(20, 20, 19, 0.15);
 }
 
 .purple {
-  background: rgba(255, 61, 0, 0.1);
-  color: #1D4ED8;
-  border: 1px solid rgba(255, 61, 0, 0.2);
+  background: #E2DDD3;
+  color: #141413;
+  border: 1px solid rgba(20, 20, 19, 0.18);
 }
 
 .cyan {
-  background: rgba(255, 160, 0, 0.1);
-  color: #3B82F6;
-  border: 1px solid rgba(255, 160, 0, 0.2);
+  background: #E8E4DB;
+  color: #2C2B28;
+  border: 1px solid rgba(20, 20, 19, 0.15);
 }
 
 .green {
-  background: rgba(255, 179, 0, 0.1);
-  color: #60A5FA;
-  border: 1px solid rgba(255, 179, 0, 0.2);
+  background: #E5E0D6;
+  color: #141413;
+  border: 1px solid rgba(20, 20, 19, 0.15);
 }
 
 .badge:hover {

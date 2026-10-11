@@ -2,53 +2,93 @@
   position: relative;
   width: 100%;
   margin-top: 40px;
+  padding-bottom: 56px; /* space for dots */
 }
 
 .viewport {
   overflow: hidden;
   width: 100%;
-  padding: 20px 0 36px 0;
+  padding: 24px 0 36px 0;
+  /* Extra horizontal space so first/last cards don't clip */
+  box-sizing: border-box;
 }
 
 .track {
   display: flex;
   gap: 24px;
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
   will-change: transform;
+  padding: 8px 0; /* vertical breathing room for box-shadow */
 }
 
-/* Arrows */
+/* ── Arrow buttons ── */
 .arrowBtn {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 28px);
   transform: translateY(-50%);
   z-index: 10;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+  background: #FAF8F5;
+  border: 1px solid #D8D1C5;
+  box-shadow: 0 4px 14px rgba(20, 20, 19, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: #0F172A;
+  color: #141413;
   transition: all 0.2s ease;
 }
 
-.arrowBtn:hover {
-  background: #2563EB;
-  border-color: #2563EB;
+.arrowBtn:hover:not(:disabled) {
+  background: #141413;
+  border-color: #141413;
   color: #FFFFFF;
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 6px 20px rgba(20, 20, 19, 0.25);
+}
+
+.arrowDisabled,
+.arrowBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .arrowLeft {
-  left: -8px;
+  left: 0;
 }
 
 .arrowRight {
-  right: -8px;
+  right: 0;
+}
+
+/* ── Dot indicators ── */
+.dots {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #D8D1C5;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0;
+}
+
+.dotActive {
+  width: 24px;
+  border-radius: 4px;
+  background: #141413;
 }
 
 @media (max-width: 768px) {

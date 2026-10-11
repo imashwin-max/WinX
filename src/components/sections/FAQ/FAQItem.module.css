@@ -1,15 +1,15 @@
 .item {
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
+  background: #FAF8F5;
+  border: 1px solid #E5DFD5;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 2px 8px rgba(20, 20, 19, 0.04);
   transition: all 0.25s ease;
 }
 
 .itemOpen {
-  border-color: rgba(37, 99, 235, 0.35);
-  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08);
+  border-color: #141413;
+  box-shadow: 0 8px 24px rgba(20, 20, 19, 0.08);
 }
 
 .questionBtn {
@@ -26,24 +26,24 @@
   font-family: 'Outfit', sans-serif;
   font-size: 17px;
   font-weight: 800;
-  color: #0F172A;
+  color: #141413;
   transition: background 0.2s ease;
 }
 
 .questionBtn:hover {
-  background: #F8FAFC;
+  background: #EFEBE1;
 }
 
 .icon {
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  background: #EFF6FF;
-  border: 1px solid #BFDBFE;
+  background: #EFEBE1;
+  border: 1px solid #E5DFD5;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2563EB;
+  color: #141413;
   flex-shrink: 0;
   transition: all 0.3s ease;
 }
@@ -51,7 +51,7 @@
 .answer {
   padding: 0 24px 22px 24px;
   font-size: 15px;
-  color: #334155;
+  color: #57534E;
   line-height: 1.7;
   font-weight: 500;
 }

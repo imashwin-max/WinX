@@ -5,7 +5,7 @@ import { useLocalStorage } from '../hooks/useLocalStorage';
 const ThemeContext = createContext(null);
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useLocalStorage('eleviq-theme', 'dark');
+  const [theme, setTheme] = useLocalStorage('winx-theme', 'dark');
 
   useEffect(() => {
     const root = document.documentElement;

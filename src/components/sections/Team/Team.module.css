@@ -1,6 +1,8 @@
 .team {
   padding: 120px 0;
-  background: #FFFFFF;
+  background: #FCFBF9;
+  border-top: 1px solid rgba(229, 223, 213, 0.7);
+  border-bottom: 1px solid rgba(229, 223, 213, 0.7);
   overflow: hidden;
 }
 
@@ -48,21 +50,21 @@
   height: 44px;
   border-radius: 50%;
   background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  color: #374151;
+  border: 1px solid #E5DFD5;
+  color: #57534E;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 2px 8px rgba(20, 20, 19, 0.06);
 }
 
 .arrowBtn:hover:not(:disabled) {
-  background: #2563EB;
-  color: #0F172A;
-  border-color: #2563EB;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  background: #141413;
+  color: #FFFFFF;
+  border-color: #141413;
+  box-shadow: 0 4px 14px rgba(20, 20, 19, 0.2);
 }
 
 .arrowBtn:disabled {
@@ -79,7 +81,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #CBD5E1;
+  background: #D8D1C5;
   border: none;
   cursor: pointer;
   transition: all 0.25s ease;
@@ -87,6 +89,6 @@
 }
 
 .dotActive {
-  background: #2563EB;
+  background: #141413;
   transform: scale(1.3);
 }

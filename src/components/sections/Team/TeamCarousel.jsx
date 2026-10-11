@@ -1,106 +1,116 @@
-import { useRef, useEffect, useState, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { TeamCard } from './TeamCard';
 import styles from './TeamCarousel.module.css';
 
 export function TeamCarousel({ members }) {
-  const trackRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const offsetRef = useRef(0);
-  const rafRef = useRef(null);
-  const cardWidthRef = useRef(0);
+  const [offset, setOffset] = useState(0);
+  const trackRef = useRef(null);
+  const wrapperRef = useRef(null);
 
-  const loopItems = [...members, ...members];
-  const SPEED = 1.00;
+  const canPrev = activeIndex > 0;
+  const canNext = activeIndex < members.length - 1;
 
-  useEffect(() => {
+  // Calculate the pixel offset needed to center the active card perfectly
+  const recalcOffset = useCallback((index) => {
     const track = trackRef.current;
-    if (!track) return;
+    const wrapper = wrapperRef.current;
+    if (!track || !wrapper) return;
 
-    const firstCard = track.children[0];
-    if (firstCard) {
-      const style = getComputedStyle(track);
-      const gap = parseFloat(style.gap) || 24;
-      cardWidthRef.current = firstCard.offsetWidth + gap;
-    }
+    const card = track.children[index];
+    if (!card) return;
 
-    const tick = () => {
-      if (!isPaused && track) {
-        offsetRef.current += SPEED;
-        const totalWidth = cardWidthRef.current * members.length;
+    const wrapperWidth = wrapper.clientWidth;
+    const cardLeft = card.offsetLeft;
+    const cardWidth = card.offsetWidth;
 
-        if (offsetRef.current >= totalWidth) {
-          offsetRef.current = 0;
-        }
+    // Center the active card inside the viewport
+    const newOffset = cardLeft - ((wrapperWidth - cardWidth) / 2);
 
-        track.style.transform = `translate3d(-${offsetRef.current}px, 0, 0)`;
+    // Clamp so last card is never pushed out of view (overflow: hidden)
+    const maxOffset = Math.max(0, track.scrollWidth - wrapperWidth);
+    setOffset(Math.max(0, Math.min(newOffset, maxOffset)));
+  }, []);
 
-        const newIndex = Math.round(offsetRef.current / cardWidthRef.current) % members.length;
-        setActiveIndex(newIndex);
-      }
-      rafRef.current = requestAnimationFrame(tick);
+  // Recalculate on index change
+  useEffect(() => {
+    recalcOffset(activeIndex);
+    const frameId = requestAnimationFrame(() => recalcOffset(activeIndex));
+    return () => cancelAnimationFrame(frameId);
+  }, [activeIndex, recalcOffset]);
+
+  // Recalculate on window resize
+  useEffect(() => {
+    const onResize = () => recalcOffset(activeIndex);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, [activeIndex, recalcOffset]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === 'ArrowLeft') setActiveIndex((i) => Math.max(0, i - 1));
+      if (e.key === 'ArrowRight') setActiveIndex((i) => Math.min(members.length - 1, i + 1));
     };
-
-    rafRef.current = requestAnimationFrame(tick);
-    return () => {
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-    };
-  }, [isPaused, members.length]);
-
-  const scrollToCard = useCallback((index) => {
-    if (index < 0 || index >= members.length) return;
-    setActiveIndex(index);
-    offsetRef.current = index * cardWidthRef.current;
-    if (trackRef.current) {
-      trackRef.current.style.transform = `translate3d(-${offsetRef.current}px, 0, 0)`;
-    }
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
   }, [members.length]);
 
-  const nextCard = useCallback(() => {
-    const next = (activeIndex + 1) % members.length;
-    scrollToCard(next);
-  }, [activeIndex, members.length, scrollToCard]);
-
-  const prevCard = useCallback(() => {
-    const prev = (activeIndex - 1 + members.length) % members.length;
-    scrollToCard(prev);
-  }, [activeIndex, members.length, scrollToCard]);
+  const prev = useCallback(() => setActiveIndex((i) => Math.max(0, i - 1)), []);
+  const next = useCallback(() => setActiveIndex((i) => Math.min(members.length - 1, i + 1)), [members.length]);
 
   return (
-    <div
-      className={styles.carouselWrapper}
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-    >
+    <div className={styles.carouselWrapper}>
+      {/* Prev button */}
       <button
-        onClick={prevCard}
-        className={`${styles.arrowBtn} ${styles.arrowLeft}`}
+        onClick={prev}
+        disabled={!canPrev}
+        className={`${styles.arrowBtn} ${styles.arrowLeft} ${!canPrev ? styles.arrowDisabled : ''}`}
         aria-label="Previous team member"
       >
-        <ChevronLeft size={24} />
+        <ChevronLeft size={22} />
       </button>
 
-      <div className={styles.viewport}>
-        <div ref={trackRef} className={styles.track}>
-          {loopItems.map((member, index) => (
+      {/* Viewport — clips overflow */}
+      <div ref={wrapperRef} className={styles.viewport}>
+        <div
+          ref={trackRef}
+          className={styles.track}
+          style={{ transform: `translateX(-${offset}px)` }}
+        >
+          {members.map((member, index) => (
             <TeamCard
-              key={`${member.id}-${index}`}
+              key={member.id}
               {...member}
-              isActive={index % members.length === activeIndex}
-              index={index % members.length}
+              isActive={index === activeIndex}
+              index={index}
             />
           ))}
         </div>
       </div>
 
+      {/* Next button */}
       <button
-        onClick={nextCard}
-        className={`${styles.arrowBtn} ${styles.arrowRight}`}
+        onClick={next}
+        disabled={!canNext}
+        className={`${styles.arrowBtn} ${styles.arrowRight} ${!canNext ? styles.arrowDisabled : ''}`}
         aria-label="Next team member"
       >
-        <ChevronRight size={24} />
+        <ChevronRight size={22} />
       </button>
+
+      {/* Dot indicators */}
+      <div className={styles.dots}>
+        {members.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setActiveIndex(i)}
+            className={`${styles.dot} ${i === activeIndex ? styles.dotActive : ''}`}
+            aria-label={`Go to team member ${i + 1}`}
+          />
+        ))}
+      </div>
     </div>
   );
 }

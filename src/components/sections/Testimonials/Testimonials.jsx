@@ -11,8 +11,8 @@ export function Testimonials() {
         <SectionHeader
           eyebrow="EXECUTIVE TESTIMONIALS"
           title="What Enterprise Leaders"
-          titleHighlight="Say About Eleviq"
-          description="Read feedback from C-level executives who partnered with Eleviq to digitize business operations."
+          titleHighlight="Say About Winx"
+          description="Read feedback from C-level executives who partnered with Winx to digitize business operations."
         />
 
         <div className={styles.grid}>

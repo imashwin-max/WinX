@@ -1,14 +1,14 @@
 .container {
   margin-top: 60px;
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
+  background: #FAF8F5;
+  border: 1px solid #E5DFD5;
   border-radius: 20px;
   padding: 28px 36px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 24px;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 4px 16px rgba(20, 20, 19, 0.04);
 }
 
 .item {
@@ -21,9 +21,9 @@
   width: 48px;
   height: 48px;
   border-radius: 14px;
-  background: #EFF6FF;
-  border: 1px solid #BFDBFE;
-  color: #2563EB;
+  background: #EFEBE1;
+  border: 1px solid #E5DFD5;
+  color: #141413;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,12 +33,12 @@
   font-family: 'Outfit', sans-serif;
   font-size: 16px;
   font-weight: 800;
-  color: #0F172A;
+  color: #141413;
 }
 
 .issuer {
   font-size: 13px;
-  color: #475569;
+  color: #78716C;
   font-weight: 600;
 }
 
