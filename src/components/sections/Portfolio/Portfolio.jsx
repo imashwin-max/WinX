@@ -4,7 +4,7 @@ import ScrollStack, { ScrollStackItem } from '../../ui/ScrollStack/ScrollStack';
 import { Badge } from '../../common/Badge/Badge';
 import { MetricCard } from './MetricCard';
 import { ClientLogos } from './ClientLogos';
-import { SpecModal } from './SpecModal';
+import { SpecModal } from './specmodal';
 import { projects } from '../../../data/projects';
 import { useNavigation } from '../../../context/NavigationContext';
 import { ArrowRight, ExternalLink } from 'lucide-react';
