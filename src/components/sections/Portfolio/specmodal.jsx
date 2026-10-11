@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { X, ExternalLink } from 'lucide-react';
-import styles from './SpecModal.module.css';
+import styles from './specmodal.module.css';
 
 const TECH_COLORS = {
   HTML: '#E34F26',
